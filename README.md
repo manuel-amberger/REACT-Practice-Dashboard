@@ -14,3 +14,7 @@ A modern React dashboard built as a hands-on learning project to practice compon
 * **Driver Cards & Leaderboard:** Dynamic display of driver positions and teams.
 * **Modular Components:** Reusable React components for cleanly structured code.
 * **Responsive Layout:** Optimized display for various screen sizes.
+
+## Preview
+
+Link: https://manuel-amberger.github.io/REACT-Practice-Dashboard/
