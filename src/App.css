@@ -1,0 +1,35 @@
+h2 {
+    margin-top : 20px;
+}
+
+.card-title {
+    font-weight : bold;
+}
+
+.driverCardContainer {
+    display : flex;
+    flex-direction : row;
+    gap : 20px;
+    align-items : center;
+    flex-wrap : wrap;
+}
+
+.driverCard {
+    background-color : #f8f9fa;
+    border : 2px solid black;
+}
+
+.driverCard.inPit {
+    border : 2px solid red;
+}
+
+.teamTitle {
+    margin-top : 10px;
+}
+
+.teamButton {
+    font-size : 15px;
+    border : 2px solid black;
+    border-radius : 5px;
+    padding : 2.5px 7.5px;
+}
