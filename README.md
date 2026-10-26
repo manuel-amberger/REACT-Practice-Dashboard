@@ -6,7 +6,8 @@ A modern React dashboard built as a hands-on learning project to practice compon
 ## Tech Stack
 
 * **Frontend:** React, JavaScript (ES6+)
-* **Styling:** HTML5, CSS3
+* **Styling:** CSS3
+* **Build-Tool:** Vite
 * **Tools:** VS Code, Git, npm
 
 ## Features
