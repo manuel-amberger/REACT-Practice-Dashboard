@@ -1,6 +1,6 @@
-export function Button({ buttonHandler, className, children }) {
+export function Button({ onClick, className, children }) {
     return (
-        <button className={className} onClick={buttonHandler}>
+        <button className={className} onClick={onClick}>
             {children}
         </button>
     );
@@ -8,7 +8,7 @@ export function Button({ buttonHandler, className, children }) {
 
 export function ButtonTooltipTeams({ buttonHandler, showTeams }) {
     return (
-        <Button className="teamButton" buttonHandler={buttonHandler}>
+        <Button className="teamButton" onClick={buttonHandler}>
             {showTeams ? 'Teams ausblenden' : 'Teams einblenden'}
         </Button>
     );
