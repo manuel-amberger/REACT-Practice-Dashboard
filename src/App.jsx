@@ -6,6 +6,7 @@ import * as driverData from './dashboard/data/data.js'
 import DriverCard from './dashboard/Komponenten/Cards.jsx'
 import { TeamCard } from './dashboard/Komponenten/Cards.jsx'
 import { ButtonTooltipTeams } from './dashboard/Komponenten/Controls/Button.jsx'
+import { Checkbox } from './dashboard/Komponenten/Controls/Checkbox.jsx';
 
 function Heading() {
   return (
@@ -17,11 +18,19 @@ function Heading() {
 }
 
 function LeaderBoard() {
-  const sortedDrivers = driverData.getSortedDrivers();
+  const [showPit, setShowPit] = useState(true);
+
+  function handleShowPit() {
+    setShowPit(!showPit);
+  }
+
+  const sortedDrivers = driverData.getSortedDrivers(showPit);
 
   return (
     <div>
       <h2>Leaderboard</h2>
+
+      <Checkbox label="Show drivers in PIT" checked={showPit} onChange={handleShowPit} />
 
       <div className="driverCardContainer">
         {sortedDrivers.map(d => (

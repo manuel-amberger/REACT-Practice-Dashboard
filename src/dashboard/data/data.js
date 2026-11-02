@@ -9,8 +9,14 @@ export const drivers = [
   { id: 8, name: "Sergio Perez", team: "Red Bull Racing", position: 8, inPit: false, points: 151 }
 ];
 
-export function getSortedDrivers() {
-  return [...drivers].sort((a, b) => b.points - a.points);
+export function getSortedDrivers(showPit) {
+  let sorted = [...drivers].sort((a, b) => b.points - a.points);
+
+  if (showPit) {
+    return sorted;
+  }
+
+  return sorted.filter(driver => !driver.inPit);
 }
 
 export function getTeams() {

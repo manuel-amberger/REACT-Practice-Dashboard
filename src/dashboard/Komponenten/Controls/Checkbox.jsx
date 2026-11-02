@@ -5,8 +5,8 @@ export function Checkbox({ label, checked, onChange }) {
 
     return (
         <>
-            <label htmlFor={id}>{label}</label>
             <input id={id} type="checkbox" checked={checked} onChange={onChange} />
+            <label htmlFor={id}>{label}</label>
         </>
     );
 }
