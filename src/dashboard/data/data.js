@@ -4,7 +4,7 @@ export const drivers = [
   { id: 3, name: "Charles Leclerc", team: "Ferrari", position: 3, inPit: true, points: 307 },
   { id: 4, name: "Oscar Piastri", team: "McLaren", position: 4, inPit: false, points: 262 },
   { id: 5, name: "Carlos Sainz", team: "Ferrari", position: 5, inPit: false, points: 244 },
-  { id: 6, name: "Lewis Hamilton", team: "Mercedes", position: 6, inPit: true, points: 190 },
+  { id: 6, name: "Kimi Räikkönen", team: "Sauber", position: 6, inPit: true, points: 190 },
   { id: 7, name: "George Russell", team: "Mercedes", position: 7, inPit: false, points: 177 },
   { id: 8, name: "Sergio Perez", team: "Red Bull Racing", position: 8, inPit: false, points: 151 },
   { id: 9, name: "Fernando Alonso", team: "Aston Martin", position: 9, inPit: false, points: 132 },
@@ -20,6 +20,87 @@ export const drivers = [
   { id: 19, name: "Gabriel Bortoleto", team: "Sauber", position: 19, inPit: false, points: 8 },
   { id: 20, name: "Franco Colapinto", team: "Williams", position: 20, inPit: false, points: 3 }
 ];
+
+export const track = {
+  name: "Red Bull Ring",
+  officialName: "Red Bull Ring Spielberg",
+  country: "Österreich",
+  countryCode: "AT",
+  city: "Spielberg",
+  region: "Steiermark",
+  location: {
+    latitude: 47.2197,
+    longitude: 14.7647,
+    altitudeMeters: 677
+  },
+  layout: {
+    lengthKm: 4.318,
+    widthMeters: 12,
+    numberOfCorners: 10,
+    direction: "Im Uhrzeigersinn",
+    elevationChangeMeters: 63,
+    startFinishStraightMeters: 626,
+    pitLaneLengthMeters: 300
+  },
+  race: {
+    standardLapCount: 71,
+    raceDistanceKm: 306.452,
+    firstGrandPrixYear: 1970,
+    currentEvent: "Großer Preis von Österreich",
+    eventType: "Formula 1 Grand Prix"
+  },
+  sectors: [
+    {
+      name: "Sektor 1",
+      description: "Lange Gerade und harte Bremszone in Kurve 1",
+      overtakingPotential: "Hoch"
+    },
+    {
+      name: "Sektor 2",
+      description: "Technischer Mittelteil mit schnellen Richtungswechseln",
+      overtakingPotential: "Mittel"
+    },
+    {
+      name: "Sektor 3",
+      description: "Schnelle Kurven und lange Anfahrt auf Start und Ziel",
+      overtakingPotential: "Hoch"
+    }
+  ],
+  corners: [
+    { number: 1, name: "Niki-Lauda-Kurve", type: "Haarnadel", direction: "Rechts", brakingZone: true },
+    { number: 2, name: "Remus-Kurve", type: "Haarnadel", direction: "Links", brakingZone: true },
+    { number: 3, name: "Schlossgold-Kurve", type: "Haarnadel", direction: "Rechts", brakingZone: true },
+    { number: 4, name: "Rauch-Kurve", type: "Schnelle Kurve", direction: "Rechts", brakingZone: false },
+    { number: 5, name: "Pirelli-Kurve", type: "Schnelle Kurve", direction: "Links", brakingZone: false },
+    { number: 6, name: "Zwischenkurve", type: "Schnelle Kurve", direction: "Links", brakingZone: false },
+    { number: 7, name: "Zwischenkurve", type: "Schnelle Kurve", direction: "Rechts", brakingZone: false },
+    { number: 8, name: "Red-Bull-Mobile-Kurve", type: "Schnelle Kurve", direction: "Rechts", brakingZone: false },
+    { number: 9, name: "Jochen-Rindt-Kurve", type: "Schnelle Kurve", direction: "Rechts", brakingZone: false },
+    { number: 10, name: "Rindt-Kurve", type: "Schnelle Kurve", direction: "Rechts", brakingZone: false }
+  ],
+  characteristics: {
+    trackType: "Power-Strecke",
+    averageSpeedKmh: 230,
+    topSpeedKmh: 320,
+    fullThrottlePercentage: 72,
+    downforceLevel: "Mittel",
+    tyreStress: "Mittel",
+    brakeStress: "Hoch",
+    overtakingDifficulty: "Niedrig",
+    drsZones: 3,
+    safetyCarProbability: "Mittel"
+  },
+  lapRecord: {
+    time: "1:05.619",
+    driver: "Carlos Sainz",
+    year: 2020
+  },
+  surface: {
+    type: "Asphalt",
+    gripLevel: "Mittel bis hoch",
+    tyreCompounds: ["C3", "C4", "C5"]
+  }
+};
 
 export function getSortedDrivers(showPit) {
   let sorted = [...drivers].sort((a, b) => b.points - a.points);
